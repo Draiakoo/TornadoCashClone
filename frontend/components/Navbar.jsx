@@ -80,13 +80,46 @@ const Navbar = () => {
                             </button>
                         </>
                         :   switchChainDisabled ?
-                            <button onClick={switchChain} disabled className="w-1/2 w-fit h-fit ml-auto my-auto mr-10 bg-yellow-200 p-3 rounded-lg text-black cursor-not-allowed">
-                                Switch chain
-                            </button>
+                            <>
+                                <div className="w-1/2 w-fit h-fit ml-auto my-auto">
+                                    <p className="font-extrabold text-slate-400">
+                                        <span className="inline-block font-extrabold text-slate-200 mr-2">
+                                            Address:
+                                        </span>
+                                        {address.substring(0, 6)}...{address.substring(address.length-4, address.length)}
+                                    </p>
+                                    <p className="font-extrabold text-slate-400">
+                                        <span className="inline-block font-extrabold text-slate-200 mr-2">
+                                            Chain ID:
+                                        </span>
+                                        {currentChainId}
+                                    </p>
+                                </div>
+                                <button onClick={switchChain} disabled className="w-1/2 w-fit h-fit ml-10 my-auto mr-10 bg-yellow-200 p-3 rounded-lg text-black cursor-not-allowed">
+                                    Switch chain
+                                </button>
+                            </>
+                            
                             :
-                            <button onClick={switchChain} className="w-1/2 w-fit h-fit ml-auto my-auto mr-10 bg-yellow-400 p-3 rounded-lg text-black hover:bg-yellow-500">
-                                Switch chain
-                            </button>
+                            <>
+                                <div className="w-1/2 w-fit h-fit ml-auto my-auto">
+                                    <p className="font-extrabold text-slate-400">
+                                        <span className="inline-block font-extrabold text-slate-200 mr-2">
+                                            Address:
+                                        </span>
+                                        {address.substring(0, 6)}...{address.substring(address.length-4, address.length)}
+                                    </p>
+                                    <p className="font-extrabold text-slate-400">
+                                        <span className="inline-block font-extrabold text-slate-200 mr-2">
+                                            Chain ID:
+                                        </span>
+                                        {currentChainId}
+                                    </p>
+                                </div>
+                                <button onClick={switchChain} className="w-1/2 w-fit h-fit ml-10 my-auto mr-10 bg-yellow-400 p-3 rounded-lg text-black hover:bg-yellow-500">
+                                    Switch chain
+                                </button>
+                            </>
                 :
                 <button onClick={connectWallet} className="w-1/2 w-fit h-fit ml-auto my-auto mr-10 bg-yellow-300 p-3 rounded-lg text-black hover:bg-yellow-500">
                     Connect wallet

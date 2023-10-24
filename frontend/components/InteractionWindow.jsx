@@ -224,73 +224,72 @@ export default function InteractionWindow() {
                 <p className="text-green-700 font-extrabold text-sm">{proofString}</p>
               </div>
               {
-                currentChainId != 11155111
+                !isAuthenticated
                 ?
                   <>
                     <p className="text-black mb-7 text-center">
-                      Change to Sepolia testnet to interact with this contract
+                    Please connect your wallet to interact with the blockchain
                     </p>
                     <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
                       Deposit an other 1 ETH
                     </button>
                   </>
                 :
-                  depositButtonDisabled ?
+                  currentChainId != 11155111
+                  ?
                     <>
-                      {
-                          !isAuthenticated ?
-                            <p className="text-black mb-7 text-center">
-                              Please connect your wallet to interact with the blockchain
-                            </p>
-                          :
-                          <></>
-                      }
+                      <p className="text-black mb-7 text-center">
+                        Change to Sepolia testnet to interact with this contract
+                      </p>
                       <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
-                        Deposit an other 1 ETH
+                      Deposit an other 1 ETH
                       </button>
                     </>
-                    
-                  :
-                    <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700" onClick={deposit}>
-                      Deposit an other 1 ETH
-                    </button>
+                  : 
+                  depositButtonDisabled
+                    ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
+                        Deposit an other 1 ETH
+                      </button>
+                    : <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
+                        Deposit an other 1 ETH
+                      </button>
               }
-              <button className="bg-orange-600 ml-4 p-2 rounded-lg hover:bg-orange-800" onClick={copyProof}>
+              <button className="bg-orange-600 mt-4 p-2 rounded-lg block mx-auto hover:bg-orange-800" onClick={copyProof}>
                 Copy proof
               </button>
               </>
             :
               <>
               {
-                currentChainId != 11155111
+                !isAuthenticated
                 ?
                   <>
                     <p className="text-black mb-7 text-center">
-                      Change to Sepolia testnet to interact with this contract
+                    Please connect your wallet to interact with the blockchain
                     </p>
                     <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
                       Deposit 1 ETH
                     </button>
                   </>
                 :
-                  depositButtonDisabled ?
+                  currentChainId != 11155111
+                  ?
                     <>
-                      {
-                        !isAuthenticated ?
-                          <p className="text-black mb-7 text-center">
-                            Please connect your wallet to interact with the blockchain
-                          </p>
-                        :
-                        <></>
-                      }
-                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
+                      <p className="text-black mb-7 text-center">
+                        Change to Sepolia testnet to interact with this contract
+                      </p>
+                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
                         Deposit 1 ETH
                       </button>
                     </>
-                  :
-                    <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
-                      Deposit 1 ETH
-                    </button>
+                  : 
+                  depositButtonDisabled
+                    ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
+                        Deposit 1 ETH
+                      </button>
+                    : <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
+                        Deposit 1 ETH
+                      </button>
               }
               </>
           }
@@ -314,42 +313,45 @@ export default function InteractionWindow() {
                 <p className="text-black mb-2">Insert your proof</p>
                 <textarea className="border-2 border-black rounded-lg w-full text-black p-3" ref={proofContent}></textarea>
                 {
-                  currentChainId != 11155111
-                  ?
-                    <>
-                      <p className="text-black mt-5 text-center">
-                        Change to Sepolia testnet to interact with this contract
-                      </p>
-                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
-                        Withdraw 1 ETH
-                      </button>
-                    </>
-                  :
-                    withdrawButtonDisabled ?
+                  !isAuthenticated
+                    ?
                       <>
-                      {
-                          !isAuthenticated ?
-                            <p className="text-black mt-5 text-center">
-                              Please connect your wallet to interact with the blockchain
-                            </p>
-                          :
-                          <></>
-                        }
-                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
-                        Withdraw 1 ETH
-                      </button>
+                        <p className="text-black mt-5 text-center">
+                          Please connect your wallet to interact with the blockchain
+                        </p>
+                        <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
+                          Withdraw 1 ETH
+                        </button>
                       </>
                     :
-                      <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 mt-3" onClick={withdraw}>
-                        Withdraw 1 ETH
-                      </button>
+                      currentChainId != 11155111
+                        ?
+                          <>
+                            <p className="text-black mt-5 text-center">
+                              Change to Sepolia testnet to interact with this contract
+                            </p>
+                            <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
+                              Withdraw 1 ETH
+                            </button>
+                          </>
+                        :
+                          withdrawButtonDisabled
+                            ?
+                              <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
+                                Withdraw 1 ETH
+                              </button>
+                            :
+                              <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 mt-3" onClick={withdraw}>
+                                Withdraw 1 ETH
+                              </button>
+
               }
               </>
           }
         </>
       }
       <p className="text-black text-center mt-10">
-        Disclaimer: this project has been made for education purpouses. It is not intended for money laundering, that is why it has been deployed in a testnet
+        Disclaimer: this project has been made for education purpouses only. It is not intended for money laundering, that is why it has been deployed in a testnet
       </p>
     </div>
   )
