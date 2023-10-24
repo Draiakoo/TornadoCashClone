@@ -14,6 +14,7 @@ New things learnt
 - Viem stack for blockchain interaction
 
 Deployed side:
+https://tornadocashclone.netlify.app/
 
 To run the frontend:
 1. ```cd frontend```
