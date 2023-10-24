@@ -231,7 +231,7 @@ export default function InteractionWindow() {
                     Please connect your wallet to interact with the blockchain
                     </p>
                     <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
-                      Deposit an other 1 ETH
+                      Deposit an other 0.1 ETH
                     </button>
                   </>
                 :
@@ -242,16 +242,16 @@ export default function InteractionWindow() {
                         Change to Sepolia testnet to interact with this contract
                       </p>
                       <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
-                      Deposit an other 1 ETH
+                      Deposit an other 0.1 ETH
                       </button>
                     </>
                   : 
                   depositButtonDisabled
                     ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
-                        Deposit an other 1 ETH
+                        Deposit an other 0.1 ETH
                       </button>
                     : <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
-                        Deposit an other 1 ETH
+                        Deposit an other 0.1 ETH
                       </button>
               }
               <button className="bg-orange-600 mt-4 p-2 rounded-lg block mx-auto hover:bg-orange-800" onClick={copyProof}>
@@ -268,7 +268,7 @@ export default function InteractionWindow() {
                     Please connect your wallet to interact with the blockchain
                     </p>
                     <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
-                      Deposit 1 ETH
+                      Deposit 0.1 ETH
                     </button>
                   </>
                 :
@@ -279,16 +279,16 @@ export default function InteractionWindow() {
                         Change to Sepolia testnet to interact with this contract
                       </p>
                       <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
-                        Deposit 1 ETH
+                        Deposit 0.1 ETH
                       </button>
                     </>
                   : 
                   depositButtonDisabled
                     ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
-                        Deposit 1 ETH
+                        Deposit 0.1 ETH
                       </button>
                     : <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
-                        Deposit 1 ETH
+                        Deposit 0.1 ETH
                       </button>
               }
               </>
@@ -320,7 +320,7 @@ export default function InteractionWindow() {
                           Please connect your wallet to interact with the blockchain
                         </p>
                         <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
-                          Withdraw 1 ETH
+                          Withdraw 0.1 ETH
                         </button>
                       </>
                     :
@@ -331,18 +331,18 @@ export default function InteractionWindow() {
                               Change to Sepolia testnet to interact with this contract
                             </p>
                             <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
-                              Withdraw 1 ETH
+                              Withdraw 0.1 ETH
                             </button>
                           </>
                         :
                           withdrawButtonDisabled
                             ?
                               <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
-                                Withdraw 1 ETH
+                                Withdraw 0.1 ETH
                               </button>
                             :
                               <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 mt-3" onClick={withdraw}>
-                                Withdraw 1 ETH
+                                Withdraw 0.1 ETH
                               </button>
 
               }
