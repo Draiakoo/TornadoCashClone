@@ -230,7 +230,7 @@ export default function InteractionWindow() {
                     <p className="text-black mb-7 text-center">
                     Please connect your wallet to interact with the blockchain
                     </p>
-                    <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
+                    <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled>
                       Deposit an other 0.1 ETH
                     </button>
                   </>
@@ -241,13 +241,13 @@ export default function InteractionWindow() {
                       <p className="text-black mb-7 text-center">
                         Change to Sepolia testnet to interact with this contract
                       </p>
-                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
+                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled>
                       Deposit an other 0.1 ETH
                       </button>
                     </>
                   : 
                   depositButtonDisabled
-                    ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
+                    ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled>
                         Deposit an other 0.1 ETH
                       </button>
                     : <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
@@ -267,7 +267,7 @@ export default function InteractionWindow() {
                     <p className="text-black mb-7 text-center">
                     Please connect your wallet to interact with the blockchain
                     </p>
-                    <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
+                    <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled>
                       Deposit 0.1 ETH
                     </button>
                   </>
@@ -278,13 +278,13 @@ export default function InteractionWindow() {
                       <p className="text-black mb-7 text-center">
                         Change to Sepolia testnet to interact with this contract
                       </p>
-                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled onClick={deposit}>
+                      <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed" disabled>
                         Deposit 0.1 ETH
                       </button>
                     </>
                   : 
                   depositButtonDisabled
-                    ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled onClick={deposit}>
+                    ? <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed block mx-auto" disabled>
                         Deposit 0.1 ETH
                       </button>
                     : <button className="bg-green-500 p-3 rounded-lg block mx-auto hover:bg-green-700 block mx-auto" onClick={deposit}>
@@ -319,7 +319,7 @@ export default function InteractionWindow() {
                         <p className="text-black mt-5 text-center">
                           Please connect your wallet to interact with the blockchain
                         </p>
-                        <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
+                        <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled>
                           Withdraw 0.1 ETH
                         </button>
                       </>
@@ -330,14 +330,14 @@ export default function InteractionWindow() {
                             <p className="text-black mt-5 text-center">
                               Change to Sepolia testnet to interact with this contract
                             </p>
-                            <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
+                            <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled>
                               Withdraw 0.1 ETH
                             </button>
                           </>
                         :
                           withdrawButtonDisabled
                             ?
-                              <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled onClick={withdraw}>
+                              <button className="bg-green-300 p-3 rounded-lg block mx-auto cursor-not-allowed mt-5" disabled>
                                 Withdraw 0.1 ETH
                               </button>
                             :

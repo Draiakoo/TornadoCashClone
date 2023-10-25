@@ -95,7 +95,7 @@ const Navbar = () => {
                                         {currentChainId}
                                     </p>
                                 </div>
-                                <button onClick={switchChain} disabled className="w-1/2 w-fit h-fit ml-10 my-auto mr-10 bg-yellow-200 p-3 rounded-lg text-black cursor-not-allowed">
+                                <button disabled className="w-1/2 w-fit h-fit ml-10 my-auto mr-10 bg-yellow-200 p-3 rounded-lg text-black cursor-not-allowed">
                                     Switch chain
                                 </button>
                             </>
